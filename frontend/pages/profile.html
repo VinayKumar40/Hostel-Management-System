@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Hostel Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="profile-container">
+        <header class="page-header">
+            <h1>User Profile</h1>
+            <p>Manage your account information</p>
+        </header>
+
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar">👤</div>
+                <div class="profile-info">
+                    <h2 id="profileName"></h2>
+                    <p id="profileRole" class="role-badge"></p>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h3>Personal Information</h3>
+                <form id="profileForm" class="crud-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="profileNameField">Full Name</label>
+                            <input type="text" id="profileNameField" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileEmailField">Email Address</label>
+                            <input type="email" id="profileEmailField" name="email" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="profilePhone">Phone Number</label>
+                            <input type="tel" id="profilePhone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="profileAddress">Address</label>
+                            <input type="text" id="profileAddress" name="address">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Update Profile</button>
+                        <button type="button" class="btn btn-secondary" onclick="resetProfileForm()">Cancel</button>
+                    </div>
+
+                    <div id="profileMessage" class="success-box" style="display: none;"></div>
+                    <div id="profileError" class="error-box" style="display: none;"></div>
+                </form>
+            </div>
+
+            <div class="profile-section">
+                <h3>Account Actions</h3>
+                <div class="action-buttons">
+                    <button class="btn btn-warning" onclick="changePassword()">🔑 Change Password</button>
+                    <button class="btn btn-danger" onclick="deleteAccount()">🗑️ Delete Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div id="changePasswordModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeChangePasswordModal()">&times;</span>
+            <h2>Change Password</h2>
+            <form id="changePasswordForm" class="crud-form">
+                <div class="form-group">
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" id="currentPassword" name="currentPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" name="newPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmNewPassword">Confirm New Password</label>
+                    <input type="password" id="confirmNewPassword" name="confirmNewPassword" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Update Password</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeChangePasswordModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
