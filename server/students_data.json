@@ -1,0 +1,1622 @@
+[
+    {
+        "name": "Abhinav Sharma",
+        "studentId": "1232027",
+        "phone": "9681352991",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 3,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Nitin Yadav",
+        "studentId": "1236760",
+        "phone": "9129775146",
+        "course": "B.Des",
+        "branch": "Graphic Design",
+        "year": 3,
+        "city": "Alwar"
+    },
+    {
+        "name": "Sourabh Yadav",
+        "studentId": "1236682",
+        "phone": "9307347931",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 3,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Lakshay Bansal",
+        "studentId": "1235447",
+        "phone": "9578719545",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Nirav Saini",
+        "studentId": "1233759",
+        "phone": "9213052220",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 3,
+        "city": "Hisar"
+    },
+    {
+        "name": "Roshan Kapoor",
+        "studentId": "1234873",
+        "phone": "9789046902",
+        "course": "M.Tech",
+        "branch": "Computer Science",
+        "year": 3,
+        "city": "Alwar"
+    },
+    {
+        "name": "Tanish Malhotra",
+        "studentId": "1236770",
+        "phone": "9721961340",
+        "course": "B.Tech",
+        "branch": "Computer Science",
+        "year": 2,
+        "city": "Indore"
+    },
+    {
+        "name": "Jagdish Rathore",
+        "studentId": "1239334",
+        "phone": "9263726803",
+        "course": "MBA",
+        "branch": "Finance",
+        "year": 3,
+        "city": "Indore"
+    },
+    {
+        "name": "Vishal Bansal",
+        "studentId": "1235456",
+        "phone": "9165287377",
+        "course": "B.Tech",
+        "branch": "Computer Science",
+        "year": 4,
+        "city": "Hisar"
+    },
+    {
+        "name": "Dhruv Kapoor",
+        "studentId": "1235690",
+        "phone": "9895011490",
+        "course": "B.Tech",
+        "branch": "Computer Science",
+        "year": 1,
+        "city": "Hisar"
+    },
+    {
+        "name": "Avi Mishra",
+        "studentId": "1237090",
+        "phone": "9758384309",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Surat"
+    },
+    {
+        "name": "Siddharth Chauhan",
+        "studentId": "1235866",
+        "phone": "9428088974",
+        "course": "M.Tech",
+        "branch": "Computer Science",
+        "year": 3,
+        "city": "Indore"
+    },
+    {
+        "name": "Anirudh Jain",
+        "studentId": "1239414",
+        "phone": "9371421337",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 1,
+        "city": "Surat"
+    },
+    {
+        "name": "Uday Sharma",
+        "studentId": "1232448",
+        "phone": "9896534171",
+        "course": "M.Tech",
+        "branch": "Power Systems",
+        "year": 2,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Harsh Vardhan",
+        "studentId": "1231159",
+        "phone": "9930139959",
+        "course": "B.Tech",
+        "branch": "Computer Science",
+        "year": 4,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Gopal Rathore",
+        "studentId": "1239990",
+        "phone": "9170438677",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Delhi"
+    },
+    {
+        "name": "Sahil Vardhan",
+        "studentId": "1237848",
+        "phone": "9726927788",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 1,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Divyansh Gupta",
+        "studentId": "1232064",
+        "phone": "9944857548",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 3,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Kishore Malhotra",
+        "studentId": "1237796",
+        "phone": "9200502129",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 1,
+        "city": "Delhi"
+    },
+    {
+        "name": "Utkarsh Mishra",
+        "studentId": "1237775",
+        "phone": "9751843802",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Hisar"
+    },
+    {
+        "name": "Vijay Gupta",
+        "studentId": "1236912",
+        "phone": "9659470017",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 4,
+        "city": "Hisar"
+    },
+    {
+        "name": "Subhash Singh",
+        "studentId": "1233203",
+        "phone": "9917183632",
+        "course": "M.Tech",
+        "branch": "Computer Science",
+        "year": 2,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Ankit Yadav",
+        "studentId": "1231121",
+        "phone": "9271214403",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Rishi Solanki",
+        "studentId": "1234322",
+        "phone": "9798870511",
+        "course": "M.Tech",
+        "branch": "Computer Science",
+        "year": 2,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Kartik Bansal",
+        "studentId": "1231513",
+        "phone": "9267151987",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 4,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Krish Sharma",
+        "studentId": "1232400",
+        "phone": "9483531250",
+        "course": "MBA",
+        "branch": "Marketing",
+        "year": 3,
+        "city": "Kota"
+    },
+    {
+        "name": "Brijesh Chauhan",
+        "studentId": "1238879",
+        "phone": "9611766610",
+        "course": "B.Tech",
+        "branch": "IT",
+        "year": 1,
+        "city": "Delhi"
+    },
+    {
+        "name": "Ravi Kumar",
+        "studentId": "1233412",
+        "phone": "9733483728",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 2,
+        "city": "Ahmedabad"
+    },
+    {
+        "name": "Nikhil Gupta",
+        "studentId": "1231577",
+        "phone": "9628517469",
+        "course": "B.Sc",
+        "branch": "Physics",
+        "year": 3,
+        "city": "Kota"
+    },
+    {
+        "name": "Tanmay Jain",
+        "studentId": "1234413",
+        "phone": "9198418084",
+        "course": "B.Tech",
+        "branch": "Computer Science",
+        "year": 4,
+        "city": "Ahmedabad"
+    },
+    {
+        "name": "Anand Mishra",
+        "studentId": "1233660",
+        "phone": "9938994294",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 4,
+        "city": "Surat"
+    },
+    {
+        "name": "Darshan Kumar",
+        "studentId": "1234328",
+        "phone": "9872224616",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 1,
+        "city": "Alwar"
+    },
+    {
+        "name": "Ujjwal Rathore",
+        "studentId": "1233959",
+        "phone": "9529916760",
+        "course": "MBA",
+        "branch": "Finance",
+        "year": 2,
+        "city": "Hisar"
+    },
+    {
+        "name": "Keshav Kapoor",
+        "studentId": "1239108",
+        "phone": "9468465917",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 1,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Chirag Bansal",
+        "studentId": "1238279",
+        "phone": "9983685060",
+        "course": "MBA",
+        "branch": "Marketing",
+        "year": 1,
+        "city": "Delhi"
+    },
+    {
+        "name": "Shourya Kapoor",
+        "studentId": "1236835",
+        "phone": "9726479874",
+        "course": "MBA",
+        "branch": "HR",
+        "year": 4,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Abhay Jain",
+        "studentId": "1237124",
+        "phone": "9393354083",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 3,
+        "city": "Indore"
+    },
+    {
+        "name": "Rahul Verma",
+        "studentId": "1232388",
+        "phone": "9521958347",
+        "course": "B.Tech",
+        "branch": "IT",
+        "year": 3,
+        "city": "Delhi"
+    },
+    {
+        "name": "Dinesh Choudhary",
+        "studentId": "1235184",
+        "phone": "9356713212",
+        "course": "B.Sc",
+        "branch": "Physics",
+        "year": 4,
+        "city": "Delhi"
+    },
+    {
+        "name": "Arush Choudhary",
+        "studentId": "1233637",
+        "phone": "9274479791",
+        "course": "B.Sc",
+        "branch": "Chemistry",
+        "year": 3,
+        "city": "Delhi"
+    },
+    {
+        "name": "Veer Vardhan",
+        "studentId": "1234663",
+        "phone": "9899460529",
+        "course": "MBA",
+        "branch": "Marketing",
+        "year": 1,
+        "city": "Delhi"
+    },
+    {
+        "name": "Vikram Yadav",
+        "studentId": "1239100",
+        "phone": "9889495826",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 1,
+        "city": "Surat"
+    },
+    {
+        "name": "Sunil Prajapati",
+        "studentId": "1235059",
+        "phone": "9359829450",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Satish Sharma",
+        "studentId": "1238402",
+        "phone": "9723832865",
+        "course": "B.Des",
+        "branch": "Graphic Design",
+        "year": 4,
+        "city": "Hisar"
+    },
+    {
+        "name": "Vihaan Bansal",
+        "studentId": "1234526",
+        "phone": "9417755378",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 4,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Pankaj Singh",
+        "studentId": "1235347",
+        "phone": "9427048774",
+        "course": "M.Tech",
+        "branch": "Power Systems",
+        "year": 2,
+        "city": "Alwar"
+    },
+    {
+        "name": "Paras Meena",
+        "studentId": "1234386",
+        "phone": "9219779089",
+        "course": "MBA",
+        "branch": "Finance",
+        "year": 4,
+        "city": "Udaipur"
+    },
+    {
+        "name": "Rohit Sharma",
+        "studentId": "1233841",
+        "phone": "9499022419",
+        "course": "M.Tech",
+        "branch": "Computer Science",
+        "year": 1,
+        "city": "Alwar"
+    },
+    {
+        "name": "Arun Jain",
+        "studentId": "1239937",
+        "phone": "9349714576",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 4,
+        "city": "Delhi"
+    },
+    {
+        "name": "Ojas Patel",
+        "studentId": "1236757",
+        "phone": "9161855018",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 4,
+        "city": "Ahmedabad"
+    },
+    {
+        "name": "Reyansh Rathore",
+        "studentId": "1235445",
+        "phone": "9456233603",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 3,
+        "city": "Udaipur"
+    },
+    {
+        "name": "Prashant Patel",
+        "studentId": "1239684",
+        "phone": "9191356397",
+        "course": "B.Des",
+        "branch": "Graphic Design",
+        "year": 1,
+        "city": "Alwar"
+    },
+    {
+        "name": "Manan Yadav",
+        "studentId": "1235980",
+        "phone": "9717911410",
+        "course": "B.Tech",
+        "branch": "Electrical",
+        "year": 1,
+        "city": "Ahmedabad"
+    },
+    {
+        "name": "Saksham Chauhan",
+        "studentId": "1233233",
+        "phone": "9975799815",
+        "course": "B.Tech",
+        "branch": "IT",
+        "year": 1,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Aryan Solanki",
+        "studentId": "1236639",
+        "phone": "9795066018",
+        "course": "B.Des",
+        "branch": "Graphic Design",
+        "year": 4,
+        "city": "Surat"
+    },
+    {
+        "name": "Vineet Kapoor",
+        "studentId": "1237538",
+        "phone": "9904679340",
+        "course": "B.Tech",
+        "branch": "Electrical",
+        "year": 4,
+        "city": "Alwar"
+    },
+    {
+        "name": "Aarav Sharma",
+        "studentId": "1239022",
+        "phone": "9696759707",
+        "course": "B.Tech",
+        "branch": "Civil",
+        "year": 4,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Shivansh Solanki",
+        "studentId": "1237574",
+        "phone": "9834293609",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 3,
+        "city": "Kota"
+    },
+    {
+        "name": "Aakash Kumar",
+        "studentId": "1232399",
+        "phone": "9859157249",
+        "course": "B.Tech",
+        "branch": "IT",
+        "year": 1,
+        "city": "Hisar"
+    },
+    {
+        "name": "Udit Choudhary",
+        "studentId": "1232408",
+        "phone": "9776854165",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 3,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Tushar Kumar",
+        "studentId": "1239339",
+        "phone": "9456948392",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Delhi"
+    },
+    {
+        "name": "Sanjay Meena",
+        "studentId": "1232369",
+        "phone": "9621930607",
+        "course": "B.Sc",
+        "branch": "Chemistry",
+        "year": 4,
+        "city": "Indore"
+    },
+    {
+        "name": "Shailesh Malhotra",
+        "studentId": "1236769",
+        "phone": "9769700505",
+        "course": "B.Tech",
+        "branch": "Electrical",
+        "year": 3,
+        "city": "Alwar"
+    },
+    {
+        "name": "Bhuvan Solanki",
+        "studentId": "1234669",
+        "phone": "9334519974",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 1,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Akshay Singh",
+        "studentId": "1239034",
+        "phone": "9432210226",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 2,
+        "city": "Delhi"
+    },
+    {
+        "name": "Daksh Prajapati",
+        "studentId": "1231373",
+        "phone": "9678326419",
+        "course": "B.Tech",
+        "branch": "Mechanical",
+        "year": 2,
+        "city": "Alwar"
+    },
+    {
+        "name": "Dilip Verma",
+        "studentId": "1232782",
+        "phone": "9497847767",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 2,
+        "city": "Indore"
+    },
+    {
+        "name": "Anil Yadav",
+        "studentId": "1233539",
+        "phone": "9583734595",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 4,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Vedant Chauhan",
+        "studentId": "1238718",
+        "phone": "9734536570",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 4,
+        "city": "Indore"
+    },
+    {
+        "name": "Nakul Verma",
+        "studentId": "1238761",
+        "phone": "9445087457",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 2,
+        "city": "Surat"
+    },
+    {
+        "name": "Krishna Chauhan",
+        "studentId": "1232538",
+        "phone": "9709332493",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 2,
+        "city": "Surat"
+    },
+    {
+        "name": "Shreyas Gupta",
+        "studentId": "1232704",
+        "phone": "9177289380",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 1,
+        "city": "Hisar"
+    },
+    {
+        "name": "Alok Choudhary",
+        "studentId": "1238430",
+        "phone": "9714807583",
+        "course": "MBA",
+        "branch": "Marketing",
+        "year": 1,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Mahesh Prajapati",
+        "studentId": "1233563",
+        "phone": "9405134818",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 4,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Manoj Bansal",
+        "studentId": "1232706",
+        "phone": "9354206029",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Kota"
+    },
+    {
+        "name": "Kunal Malhotra",
+        "studentId": "1235334",
+        "phone": "9131149580",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 3,
+        "city": "Alwar"
+    },
+    {
+        "name": "Advait Gupta",
+        "studentId": "1235064",
+        "phone": "9458616060",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 4,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Raman Mishra",
+        "studentId": "1238300",
+        "phone": "9418770786",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Surat"
+    },
+    {
+        "name": "Bharat Saini",
+        "studentId": "1232570",
+        "phone": "9858603790",
+        "course": "B.Sc",
+        "branch": "Chemistry",
+        "year": 3,
+        "city": "Udaipur"
+    },
+    {
+        "name": "Karan Chauhan",
+        "studentId": "1231813",
+        "phone": "9604498615",
+        "course": "B.Tech",
+        "branch": "Electrical",
+        "year": 4,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Navya Meena",
+        "studentId": "1237835",
+        "phone": "9315703024",
+        "course": "M.Tech",
+        "branch": "Power Systems",
+        "year": 3,
+        "city": "Ahmedabad"
+    },
+    {
+        "name": "Pradeep Kumar",
+        "studentId": "1239341",
+        "phone": "9258560306",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 1,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Gagan Yadav",
+        "studentId": "1237661",
+        "phone": "9430449677",
+        "course": "B.Tech",
+        "branch": "Civil",
+        "year": 2,
+        "city": "Delhi"
+    },
+    {
+        "name": "Harsh Bansal",
+        "studentId": "1232191",
+        "phone": "9807220733",
+        "course": "MBA",
+        "branch": "HR",
+        "year": 2,
+        "city": "Hisar"
+    },
+    {
+        "name": "Prakash Yadav",
+        "studentId": "1239758",
+        "phone": "9373626091",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 4,
+        "city": "Kota"
+    },
+    {
+        "name": "Ekansh Malhotra",
+        "studentId": "1234598",
+        "phone": "9123306230",
+        "course": "MBA",
+        "branch": "Marketing",
+        "year": 1,
+        "city": "Delhi"
+    },
+    {
+        "name": "Kamal Vardhan",
+        "studentId": "1233894",
+        "phone": "9696563611",
+        "course": "B.Sc",
+        "branch": "Physics",
+        "year": 1,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Rohan Patel",
+        "studentId": "1239715",
+        "phone": "9269442801",
+        "course": "MBA",
+        "branch": "Finance",
+        "year": 2,
+        "city": "Alwar"
+    },
+    {
+        "name": "Ayaan Vardhan",
+        "studentId": "1239519",
+        "phone": "9579212294",
+        "course": "B.Sc",
+        "branch": "Chemistry",
+        "year": 4,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Pawan Gupta",
+        "studentId": "1231548",
+        "phone": "9145993891",
+        "course": "MBA",
+        "branch": "Finance",
+        "year": 3,
+        "city": "Alwar"
+    },
+    {
+        "name": "Varun Solanki",
+        "studentId": "1236789",
+        "phone": "9320672486",
+        "course": "M.Tech",
+        "branch": "Power Systems",
+        "year": 3,
+        "city": "Hisar"
+    },
+    {
+        "name": "Hardik Jain",
+        "studentId": "1232683",
+        "phone": "9633396423",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 4,
+        "city": "Indore"
+    },
+    {
+        "name": "Arnav Patel",
+        "studentId": "1237668",
+        "phone": "9970669312",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 4,
+        "city": "Alwar"
+    },
+    {
+        "name": "Puneet Meena",
+        "studentId": "1231334",
+        "phone": "9654921948",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 4,
+        "city": "Surat"
+    },
+    {
+        "name": "Sushil Meena",
+        "studentId": "1236372",
+        "phone": "9524214273",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 2,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Ramesh Patel",
+        "studentId": "1237198",
+        "phone": "9400163491",
+        "course": "B.Des",
+        "branch": "Graphic Design",
+        "year": 3,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Tejas Patel",
+        "studentId": "1239363",
+        "phone": "9564017153",
+        "course": "B.Tech",
+        "branch": "Electrical",
+        "year": 4,
+        "city": "Kota"
+    },
+    {
+        "name": "Piyush Saini",
+        "studentId": "1233714",
+        "phone": "9734807508",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 3,
+        "city": "Kota"
+    },
+    {
+        "name": "Mukesh Prajapati",
+        "studentId": "1232228",
+        "phone": "9538633479",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Indore"
+    },
+    {
+        "name": "Hemant Saini",
+        "studentId": "1239305",
+        "phone": "9275718029",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 4,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Girish Meena",
+        "studentId": "1235478",
+        "phone": "9748331754",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 1,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Rudra Mishra",
+        "studentId": "1232718",
+        "phone": "9660233456",
+        "course": "B.Tech",
+        "branch": "Civil",
+        "year": 3,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Pranav Choudhary",
+        "studentId": "1238664",
+        "phone": "9712197688",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 1,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Atul Malhotra",
+        "studentId": "1239523",
+        "phone": "9677718651",
+        "course": "B.Sc",
+        "branch": "Chemistry",
+        "year": 4,
+        "city": "Alwar"
+    },
+    {
+        "name": "Gautam Singh",
+        "studentId": "1231355",
+        "phone": "9482817142",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Alwar"
+    },
+    {
+        "name": "Yogesh Saini",
+        "studentId": "1232391",
+        "phone": "9609051270",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 1,
+        "city": "Hisar"
+    },
+    {
+        "name": "Deepak Choudhary",
+        "studentId": "1232149",
+        "phone": "9716650992",
+        "course": "B.Des",
+        "branch": "Graphic Design",
+        "year": 4,
+        "city": "Hisar"
+    },
+    {
+        "name": "Vimal Solanki",
+        "studentId": "1237171",
+        "phone": "9937204131",
+        "course": "MBA",
+        "branch": "HR",
+        "year": 2,
+        "city": "Indore"
+    },
+    {
+        "name": "Jayesh Vardhan",
+        "studentId": "1232709",
+        "phone": "9408934590",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 1,
+        "city": "Udaipur"
+    },
+    {
+        "name": "Ishaan Kapoor",
+        "studentId": "1231561",
+        "phone": "9548481486",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 4,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Jatin Malhotra",
+        "studentId": "1231649",
+        "phone": "9401652106",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 1,
+        "city": "Surat"
+    },
+    {
+        "name": "Rajeev Rathore",
+        "studentId": "1234215",
+        "phone": "9285367988",
+        "course": "MBA",
+        "branch": "HR",
+        "year": 3,
+        "city": "Surat"
+    },
+    {
+        "name": "Akash Verma",
+        "studentId": "1236829",
+        "phone": "9179356980",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 1,
+        "city": "Alwar"
+    },
+    {
+        "name": "Sandeep Singh",
+        "studentId": "1238656",
+        "phone": "9836294674",
+        "course": "B.Sc",
+        "branch": "Physics",
+        "year": 3,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Sarthak Kumar",
+        "studentId": "1236233",
+        "phone": "9794117598",
+        "course": "M.Tech",
+        "branch": "Power Systems",
+        "year": 2,
+        "city": "Udaipur"
+    },
+    {
+        "name": "Rakesh Saini",
+        "studentId": "1235390",
+        "phone": "9608269298",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Himanshu Solanki",
+        "studentId": "1232315",
+        "phone": "9743631834",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 2,
+        "city": "Alwar"
+    },
+    {
+        "name": "Raghav Jain",
+        "studentId": "1235547",
+        "phone": "9624510292",
+        "course": "B.Tech",
+        "branch": "Electrical",
+        "year": 1,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Neil Jain",
+        "studentId": "1235579",
+        "phone": "9663444082",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 1,
+        "city": "Hisar"
+    },
+    {
+        "name": "Aakarsh Prajapati",
+        "studentId": "1231447",
+        "phone": "9887586353",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 4,
+        "city": "Surat"
+    },
+    {
+        "name": "Narendra Gupta",
+        "studentId": "1238355",
+        "phone": "9707633410",
+        "course": "M.Tech",
+        "branch": "Computer Science",
+        "year": 4,
+        "city": "Kota"
+    },
+    {
+        "name": "Ashok Kapoor",
+        "studentId": "1234053",
+        "phone": "9126339308",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 1,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Rajat Joshi",
+        "studentId": "1234361",
+        "phone": "9712853141",
+        "course": "B.Sc",
+        "branch": "Physics",
+        "year": 1,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Harish Mishra",
+        "studentId": "1237025",
+        "phone": "9968629746",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Dheeraj Sharma",
+        "studentId": "1232005",
+        "phone": "9763949644",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 2,
+        "city": "Hisar"
+    },
+    {
+        "name": "Sachin Yadav",
+        "studentId": "1237129",
+        "phone": "9261267857",
+        "course": "MBA",
+        "branch": "HR",
+        "year": 1,
+        "city": "Hisar"
+    },
+    {
+        "name": "Bhavesh Patel",
+        "studentId": "1233180",
+        "phone": "9151113285",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 1,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Rishabh Vardhan",
+        "studentId": "1238131",
+        "phone": "9172165329",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 2,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Tanuj Saini",
+        "studentId": "1235537",
+        "phone": "9657057966",
+        "course": "B.Sc",
+        "branch": "Physics",
+        "year": 4,
+        "city": "Delhi"
+    },
+    {
+        "name": "Ashish Meena",
+        "studentId": "1233043",
+        "phone": "9241267178",
+        "course": "MBA",
+        "branch": "HR",
+        "year": 3,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Adarsh Saini",
+        "studentId": "1231537",
+        "phone": "9374845674",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 2,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Samarth Bansal",
+        "studentId": "1236872",
+        "phone": "9647209406",
+        "course": "MBA",
+        "branch": "Finance",
+        "year": 1,
+        "city": "Udaipur"
+    },
+    {
+        "name": "Naveen Kumar",
+        "studentId": "1236905",
+        "phone": "9296466985",
+        "course": "B.Tech",
+        "branch": "IT",
+        "year": 2,
+        "city": "Ahmedabad"
+    },
+    {
+        "name": "Saurabh Kapoor",
+        "studentId": "1232984",
+        "phone": "9241148265",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 3,
+        "city": "Delhi"
+    },
+    {
+        "name": "Ankur Singh",
+        "studentId": "1235709",
+        "phone": "9628818890",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 1,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Manish Kumar",
+        "studentId": "1235762",
+        "phone": "9423607545",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 1,
+        "city": "Hisar"
+    },
+    {
+        "name": "Sumit Bansal",
+        "studentId": "1234935",
+        "phone": "9868970707",
+        "course": "B.Sc",
+        "branch": "Physics",
+        "year": 1,
+        "city": "Kota"
+    },
+    {
+        "name": "Vipin Malhotra",
+        "studentId": "1236864",
+        "phone": "9266121949",
+        "course": "MBA",
+        "branch": "Finance",
+        "year": 4,
+        "city": "Alwar"
+    },
+    {
+        "name": "Chetan Patel",
+        "studentId": "1231878",
+        "phone": "9438576288",
+        "course": "B.Tech",
+        "branch": "Civil",
+        "year": 4,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Vivek Singh",
+        "studentId": "1234665",
+        "phone": "9718683455",
+        "course": "B.Tech",
+        "branch": "Computer Science",
+        "year": 4,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Shubham Jain",
+        "studentId": "1235620",
+        "phone": "9773276367",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 3,
+        "city": "Hisar"
+    },
+    {
+        "name": "Parth Jain",
+        "studentId": "1233950",
+        "phone": "9336919085",
+        "course": "B.Des",
+        "branch": "Graphic Design",
+        "year": 2,
+        "city": "Delhi"
+    },
+    {
+        "name": "Yatin Chauhan",
+        "studentId": "1239571",
+        "phone": "9929286067",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 1,
+        "city": "Hisar"
+    },
+    {
+        "name": "Vinay Malhotra",
+        "studentId": "1236597",
+        "phone": "9933914293",
+        "course": "B.Sc",
+        "branch": "Chemistry",
+        "year": 2,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Neeraj Sharma",
+        "studentId": "1238119",
+        "phone": "9560853070",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 4,
+        "city": "Surat"
+    },
+    {
+        "name": "Kabir Kumar",
+        "studentId": "1236026",
+        "phone": "9294344285",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 3,
+        "city": "Hisar"
+    },
+    {
+        "name": "Atharv Rathore",
+        "studentId": "1236417",
+        "phone": "9610316972",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 4,
+        "city": "Surat"
+    },
+    {
+        "name": "Ranjan Choudhary",
+        "studentId": "1236390",
+        "phone": "9684267984",
+        "course": "MBA",
+        "branch": "HR",
+        "year": 1,
+        "city": "Ahmedabad"
+    },
+    {
+        "name": "Amit Gupta",
+        "studentId": "1232174",
+        "phone": "9346298599",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 1,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Amitabh Rathore",
+        "studentId": "1233957",
+        "phone": "9166475913",
+        "course": "MBA",
+        "branch": "Finance",
+        "year": 1,
+        "city": "Udaipur"
+    },
+    {
+        "name": "Naman Singh",
+        "studentId": "1237894",
+        "phone": "9308714437",
+        "course": "B.Tech",
+        "branch": "Mechanical",
+        "year": 4,
+        "city": "Kota"
+    },
+    {
+        "name": "Sameer Solanki",
+        "studentId": "1236914",
+        "phone": "9115584925",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 2,
+        "city": "Kota"
+    },
+    {
+        "name": "Abhishek Kumar",
+        "studentId": "1235526",
+        "phone": "9441479285",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 4,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Yuvaan Bansal",
+        "studentId": "1232319",
+        "phone": "9499399272",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 4,
+        "city": "Hisar"
+    },
+    {
+        "name": "Madhav Gupta",
+        "studentId": "1238882",
+        "phone": "9540626710",
+        "course": "MBA",
+        "branch": "HR",
+        "year": 3,
+        "city": "Delhi"
+    },
+    {
+        "name": "Agastya Yadav",
+        "studentId": "1233353",
+        "phone": "9834586652",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 4,
+        "city": "Kota"
+    },
+    {
+        "name": "Yash Prajapati",
+        "studentId": "1232619",
+        "phone": "9604962222",
+        "course": "B.Des",
+        "branch": "Graphic Design",
+        "year": 3,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Anmol Saini",
+        "studentId": "1233454",
+        "phone": "9757536846",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 4,
+        "city": "Indore"
+    },
+    {
+        "name": "Laksh Verma",
+        "studentId": "1233922",
+        "phone": "9679202781",
+        "course": "B.Sc",
+        "branch": "Chemistry",
+        "year": 2,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Garvit Chauhan",
+        "studentId": "1233454-160",
+        "phone": "9495712651",
+        "course": "MBA",
+        "branch": "Marketing",
+        "year": 4,
+        "city": "Indore"
+    },
+    {
+        "name": "Arjun Singh",
+        "studentId": "1233777",
+        "phone": "9504374760",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 1,
+        "city": "Kota"
+    },
+    {
+        "name": "Aniket Meena",
+        "studentId": "1231495",
+        "phone": "9142967088",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 2,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Nitesh Verma",
+        "studentId": "1232318",
+        "phone": "9568481751",
+        "course": "M.Tech",
+        "branch": "Computer Science",
+        "year": 1,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Aditya Verma",
+        "studentId": "1237521",
+        "phone": "9767871965",
+        "course": "B.Sc",
+        "branch": "Chemistry",
+        "year": 4,
+        "city": "Alwar"
+    },
+    {
+        "name": "Aman Gupta",
+        "studentId": "1235661",
+        "phone": "9132758372",
+        "course": "B.Des",
+        "branch": "Graphic Design",
+        "year": 2,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Saanvi Vardhan",
+        "studentId": "1234351",
+        "phone": "9284310622",
+        "course": "B.Sc",
+        "branch": "Physics",
+        "year": 1,
+        "city": "Bhopal"
+    },
+    {
+        "name": "Jai Mishra",
+        "studentId": "1238610",
+        "phone": "9467989487",
+        "course": "B.Tech",
+        "branch": "IT",
+        "year": 1,
+        "city": "Surat"
+    },
+    {
+        "name": "Sagar Mishra",
+        "studentId": "1233968",
+        "phone": "9963256838",
+        "course": "B.Sc",
+        "branch": "Physics",
+        "year": 3,
+        "city": "Surat"
+    },
+    {
+        "name": "Lalit Chauhan",
+        "studentId": "1236981",
+        "phone": "9992685690",
+        "course": "MBA",
+        "branch": "HR",
+        "year": 1,
+        "city": "Hisar"
+    },
+    {
+        "name": "Ishan Prajapati",
+        "studentId": "1232701",
+        "phone": "9479426235",
+        "course": "M.Tech",
+        "branch": "Computer Science",
+        "year": 4,
+        "city": "Kota"
+    },
+    {
+        "name": "Om Singh",
+        "studentId": "1234781",
+        "phone": "9797941520",
+        "course": "B.Sc",
+        "branch": "Mathematics",
+        "year": 4,
+        "city": "Ahmedabad"
+    },
+    {
+        "name": "Gaurav Mishra",
+        "studentId": "1233369",
+        "phone": "9319965417",
+        "course": "BBA",
+        "branch": "Management",
+        "year": 4,
+        "city": "Ahmedabad"
+    },
+    {
+        "name": "Umesh Verma",
+        "studentId": "1235520",
+        "phone": "9113434441",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 3,
+        "city": "Ahmedabad"
+    },
+    {
+        "name": "Mohan Sharma",
+        "studentId": "1236044",
+        "phone": "9330224976",
+        "course": "MBA",
+        "branch": "Finance",
+        "year": 1,
+        "city": "Kota"
+    },
+    {
+        "name": "Lokesh Prajapati",
+        "studentId": "1238158",
+        "phone": "9223411098",
+        "course": "M.Tech",
+        "branch": "Computer Science",
+        "year": 4,
+        "city": "Udaipur"
+    },
+    {
+        "name": "Ajay Sharma",
+        "studentId": "1231811",
+        "phone": "9582916767",
+        "course": "B.Sc",
+        "branch": "Chemistry",
+        "year": 3,
+        "city": "Kota"
+    },
+    {
+        "name": "Kiran Kapoor",
+        "studentId": "1238352",
+        "phone": "9232305402",
+        "course": "B.Tech",
+        "branch": "Mechanical",
+        "year": 3,
+        "city": "Vadodara"
+    },
+    {
+        "name": "Devendra Rathore",
+        "studentId": "1233492",
+        "phone": "9304360405",
+        "course": "MBA",
+        "branch": "Finance",
+        "year": 3,
+        "city": "Rohtak"
+    },
+    {
+        "name": "Mayank Kumar",
+        "studentId": "1232936",
+        "phone": "9219606795",
+        "course": "B.Des",
+        "branch": "Product Design",
+        "year": 1,
+        "city": "Jaipur"
+    },
+    {
+        "name": "Shivam Chauhan",
+        "studentId": "1238405",
+        "phone": "9164886104",
+        "course": "LL.B",
+        "branch": "Law",
+        "year": 3,
+        "city": "Alwar"
+    }
+]
