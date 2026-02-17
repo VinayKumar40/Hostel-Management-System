@@ -287,7 +287,7 @@ const RMSInbox = () => { // Kept filename as RMSInbox for route compatibility
                                                                 <div
                                                                     key={student._id}
                                                                     className="px-4 py-2 hover:bg-slate-800 cursor-pointer text-sm text-slate-300 transition-colors"
-                                                                    onMouseDown={(e) => {
+                                                                    onMouseDown={(e) => { // Use onMouseDown to prevent blur before click
                                                                         e.preventDefault();
                                                                         setFormData({
                                                                             ...formData,
