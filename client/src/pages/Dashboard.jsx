@@ -13,7 +13,7 @@ const Dashboard = () => {
                 <header className="flex items-center justify-between">
                     <div>
                         <h1 className="text-2xl font-bold text-white">Welcome back, {user?.name}</h1>
-                        <p className="text-slate-400">Here's what's happening in Boys Hostel today.</p>
+                        <p className="text-slate-400">Here's what's happening in Boys Hostel today.</p> // Standardized block name
                     </div>
                 </header>
 

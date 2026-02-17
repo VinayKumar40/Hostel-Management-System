@@ -26,7 +26,7 @@ const RMSInbox = () => { // Kept filename as RMSInbox for route compatibility
     const [formData, setFormData] = useState({
         studentName: '',
         roomNumber: '',
-        block: 'Boys Hostel', // Default
+        block: 'Boys Hostel', // Standardized block name
         category: 'Room Issues',
         subcategory: '',
         description: '',
@@ -42,7 +42,7 @@ const RMSInbox = () => { // Kept filename as RMSInbox for route compatibility
         'Common Area Maintenance'
     ];
 
-    const blocks = ['Boys Hostel'];
+    const blocks = ['Boys Hostel']; // Standardized block names
 
     const fetchRequests = async () => {
         try {

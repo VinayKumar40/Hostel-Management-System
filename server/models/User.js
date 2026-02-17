@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema({
     },
     assignedBlock: { // For wardens
         type: String,
-        default: 'Boys Hostel'
+        default: 'Boys Hostel' // Standardized block name
     },
     roomNumber: {
         type: String
