@@ -113,10 +113,7 @@ const searchStudents = async (req, res) => {
         }
 
         const students = await Student.find({
-            $or: [
-                { name: { $regex: '^' + query, $options: 'i' } },
-                { studentId: { $regex: '^' + query, $options: 'i' } }
-            ]
+            name: { $regex: '^' + query, $options: 'i' }
         })
             .populate('room', 'roomNumber')
             .limit(10)
