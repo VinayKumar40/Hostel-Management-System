@@ -15,6 +15,8 @@ const LeaveManagement = () => {
     const [loading, setLoading] = useState(true);
     const [profile, setProfile] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
+    const [showWardenModal, setShowWardenModal] = useState(false);
+    const [allStudents, setAllStudents] = useState([]);
 
     // Form State
     const [formData, setFormData] = useState({
@@ -52,6 +54,13 @@ const LeaveManagement = () => {
     useEffect(() => {
         fetchLeaves();
         fetchProfile();
+        if (user.role !== 'student') {
+            const fetchStudents = async () => {
+                const { data } = await axios.get('/api/users/students');
+                setAllStudents(data);
+            };
+            fetchStudents();
+        }
     }, []);
 
     const handleApply = async (e) => {
@@ -88,9 +97,125 @@ const LeaveManagement = () => {
         try {
             await axios.put(`/api/leaves/${id}/gate`, { type });
             fetchLeaves();
+            if (type === 'check-in') {
+                alert('Success: Student arrival recorded successfully.');
+            }
         } catch (error) {
-            alert('Error recording gate entry');
+            alert(error.response?.data?.message || 'Error recording gate entry');
         }
+    };
+
+    const WardenLeaveModal = ({ onClose, onSuccess }) => {
+        const [wData, setWData] = useState({
+            studentId: '', leaveType: 'Day Leave', visitPlace: '', reason: '',
+            startDate: '', endDate: ''
+        });
+        const [nameQuery, setNameQuery] = useState('');
+        const [showSuggestions, setShowSuggestions] = useState(false);
+        const [submitting, setSubmitting] = useState(false);
+
+        const suggestions = allStudents.filter(s =>
+            s.name.toLowerCase().includes(nameQuery.toLowerCase()) ||
+            s.studentId.includes(nameQuery)
+        ).slice(0, 5);
+
+        const handleSubmit = async (e) => {
+            e.preventDefault();
+            if (!wData.studentId) return alert('Please select a student from the list');
+            setSubmitting(true);
+            try {
+                await axios.post('/api/leaves/warden-create', wData);
+                onSuccess();
+            } catch (error) {
+                alert(error.response?.data?.message || 'Error creating leave');
+            } finally {
+                setSubmitting(false);
+            }
+        };
+
+        return (
+            <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md">
+                <div className="bg-slate-900 border border-slate-700 w-full max-w-lg rounded-[2.5rem] overflow-hidden shadow-2xl">
+                    <div className="p-8 border-b border-slate-800 flex justify-between items-center bg-slate-900/50">
+                        <div className="flex items-center space-x-3">
+                            <div className="p-3 bg-blue-600/10 text-blue-500 rounded-2xl"><Send size={24} /></div>
+                            <h2 className="text-xl font-black text-white uppercase tracking-tight">New Leave (Warden Entry)</h2>
+                        </div>
+                        <button onClick={onClose} className="text-slate-500 hover:text-white transition-colors p-2"><XCircle size={24} /></button>
+                    </div>
+                    <form onSubmit={handleSubmit} className="p-8 space-y-6">
+                        <div className="space-y-1 relative">
+                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Student Name / Reg No</label>
+                            <div className="relative">
+                                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" size={16} />
+                                <input
+                                    required
+                                    placeholder="Type name or reg no..."
+                                    className="w-full bg-slate-950 border border-slate-800 rounded-xl pl-12 pr-4 py-3 text-white text-sm focus:border-blue-500 transition-all"
+                                    value={nameQuery}
+                                    onChange={e => { setNameQuery(e.target.value); setShowSuggestions(true); }}
+                                    onFocus={() => setShowSuggestions(true)}
+                                />
+                            </div>
+                            {showSuggestions && nameQuery.length > 0 && (
+                                <div className="absolute z-50 w-full mt-1 bg-slate-900 border border-slate-800 rounded-xl shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-2">
+                                    {suggestions.length > 0 ? suggestions.map(s => (
+                                        <button
+                                            key={s._id}
+                                            type="button"
+                                            className="w-full text-left px-4 py-3 hover:bg-slate-800 flex justify-between items-center border-b border-slate-800/50 last:border-0"
+                                            onClick={() => {
+                                                setWData({ ...wData, studentId: s.studentId });
+                                                setNameQuery(s.name);
+                                                setShowSuggestions(false);
+                                            }}
+                                        >
+                                            <span className="text-white font-bold text-sm tracking-tight">{s.name}</span>
+                                            <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">REG: {s.studentId}</span>
+                                        </button>
+                                    )) : <div className="p-4 text-center text-slate-500 text-xs italic">No matching students found</div>}
+                                </div>
+                            )}
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="space-y-1">
+                                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Selected Reg No</label>
+                                <input readOnly value={wData.studentId} className="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-4 py-3 text-slate-400 text-sm font-mono" />
+                            </div>
+                            <div className="space-y-1">
+                                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Type</label>
+                                <select className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm" onChange={e => setWData({ ...wData, leaveType: e.target.value })}>
+                                    <option>Day Leave</option><option>Night Leave</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="space-y-1">
+                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Visit Place</label>
+                            <input required placeholder="Destination address..." className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm" onChange={e => setWData({ ...wData, visitPlace: e.target.value })} />
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="space-y-1">
+                                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Start Date/Time</label>
+                                <input type="datetime-local" required className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm" onChange={e => setWData({ ...wData, startDate: e.target.value })} />
+                            </div>
+                            <div className="space-y-1">
+                                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">End Date/Time</label>
+                                <input type="datetime-local" required className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm" onChange={e => setWData({ ...wData, endDate: e.target.value })} />
+                            </div>
+                        </div>
+                        <div className="space-y-1">
+                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Reason</label>
+                            <textarea placeholder="Purpose of visit..." rows="2" className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm" onChange={e => setWData({ ...wData, reason: e.target.value })}></textarea>
+                        </div>
+                        <button disabled={submitting} type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-2xl uppercase tracking-widest shadow-xl shadow-blue-600/20">
+                            {submitting ? 'Creating...' : 'Issue Leave & Approve'}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        );
     };
 
     const getStatusColor = (status) => {
@@ -103,11 +228,14 @@ const LeaveManagement = () => {
         }
     };
 
-    const filteredLeaves = leaves.filter(l =>
-        l.student?.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        l.student?.studentId?.includes(searchTerm) ||
-        l.leaveType.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const filteredLeaves = leaves.filter(l => {
+        const studentName = l.student?.name?.toLowerCase() || '';
+        const studentId = l.student?.studentId || '';
+        const leaveType = l.leaveType?.toLowerCase() || '';
+        const search = searchTerm.toLowerCase();
+
+        return studentName.includes(search) || studentId.includes(searchTerm) || leaveType.includes(search);
+    });
 
     const safeFormat = (dateString, formatStr) => {
         try {
@@ -270,17 +398,26 @@ const LeaveManagement = () => {
                     </div>
                 )}
 
-                {/* Warden Search Bar */}
+                {/* Warden Search Bar & Create */}
                 {user.role !== 'student' && (
-                    <div className="relative max-w-md">
-                        <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-500" size={18} />
-                        <input
-                            type="text"
-                            placeholder="Find student leave requests..."
-                            className="w-full bg-slate-900 border border-slate-800 rounded-2xl pl-14 pr-6 py-4 text-white text-sm focus:outline-none focus:border-blue-500 transition-all shadow-lg"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                        />
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div className="relative max-w-md w-full">
+                            <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-500" size={18} />
+                            <input
+                                type="text"
+                                placeholder="Find student leave requests..."
+                                className="w-full bg-slate-900 border border-slate-800 rounded-2xl pl-14 pr-6 py-4 text-white text-sm focus:outline-none focus:border-blue-500 transition-all shadow-lg"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                            />
+                        </div>
+                        <button
+                            onClick={() => setShowWardenModal(true)}
+                            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-xs shadow-xl shadow-blue-600/20 flex items-center gap-2"
+                        >
+                            <Send size={16} />
+                            Issue Manual Leave
+                        </button>
                     </div>
                 )}
 
@@ -313,8 +450,8 @@ const LeaveManagement = () => {
                                                     {user.role === 'student' ? 'L' : leave.student?.name?.[0]}
                                                 </div>
                                                 <div>
-                                                    <p className="text-white font-bold text-sm">{user.role === 'student' ? leave.leaveType : leave.student?.name}</p>
-                                                    <p className="text-[10px] text-slate-500 font-black uppercase tracking-tight">#{leave._id.slice(-6)} {user.role !== 'student' && `• ${leave.student?.studentId}`}</p>
+                                                    <p className="text-white font-bold text-sm tracking-tight uppercase">{user.role === 'student' ? leave.leaveType : (leave.student?.name || 'STUDENT REMOVED')}</p>
+                                                    <p className="text-[10px] text-slate-500 font-black uppercase tracking-tight">#{leave._id.slice(-6)} {user.role !== 'student' && `• ${leave.student?.studentId || 'N/A'}`}</p>
                                                 </div>
                                             </div>
                                         </td>
@@ -413,6 +550,7 @@ const LeaveManagement = () => {
                         </table>
                     </div>
                 </div>
+                {showWardenModal && <WardenLeaveModal onClose={() => setShowWardenModal(false)} onSuccess={() => { setShowWardenModal(false); fetchLeaves(); }} />}
             </div>
         </Layout>
     );

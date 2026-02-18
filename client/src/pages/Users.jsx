@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Layout from '../components/Layout';
-import { UserPlus, UserMinus, Search, GraduationCap, Shield, X, MapPin, Phone, Mail, Award, AlertTriangle, CheckCircle, CreditCard, Repeat, Utensils } from 'lucide-react';
+import { UserPlus, UserMinus, Search, GraduationCap, Shield, X, MapPin, Phone, Mail, Award, AlertTriangle, CheckCircle, CreditCard, Repeat, Utensils, Clock } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 const Users = () => {
@@ -14,6 +14,8 @@ const Users = () => {
     const [showShiftModal, setShowShiftModal] = useState(false);
     const [showAddModal, setShowAddModal] = useState(false);
     const [showRemoveModal, setShowRemoveModal] = useState(false);
+    const [showActivityModal, setShowActivityModal] = useState(false);
+    const [recentLeaves, setRecentLeaves] = useState([]);
     const [shiftingUser, setShiftingUser] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const { user } = useAuth();
@@ -122,6 +124,108 @@ const Users = () => {
                                 <p className="text-slate-500 text-[10px] font-medium text-center italic py-2">No disciplinary records found. Good behavioral standing.</p>
                             )}
                         </div>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    const RecentActivityModal = ({ onClose }) => {
+        const [fetching, setFetching] = useState(true);
+        const [recentActivity, setRecentActivity] = useState([]);
+
+        const fetchActivity = async () => {
+            try {
+                const { data } = await axios.get('/api/leaves/activity');
+                setRecentActivity(data);
+                setFetching(false);
+            } catch (error) {
+                console.error('Error fetching activity:', error);
+                setFetching(false);
+            }
+        };
+
+        useEffect(() => {
+            fetchActivity();
+            const interval = setInterval(fetchActivity, 30000); // 30s polling
+            return () => clearInterval(interval);
+        }, []);
+
+        return (
+            <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+                <div className="bg-slate-900 border border-slate-700 w-full max-w-3xl rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col max-h-[85vh]">
+                    <div className="p-8 border-b border-slate-800 flex justify-between items-center bg-slate-900/50">
+                        <div className="flex items-center space-x-3">
+                            <div className="p-3 bg-amber-500/10 text-amber-500 rounded-2xl"><Clock size={24} /></div>
+                            <div>
+                                <h2 className="text-xl font-black text-white uppercase tracking-tight">Recent Gate Activity</h2>
+                                <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Last 24 Hours • Live Updates</p>
+                            </div>
+                        </div>
+                        <button onClick={onClose} className="text-slate-500 hover:text-white transition-colors p-2 text-3xl font-light">&times;</button>
+                    </div>
+                    <div className="p-8 overflow-y-auto space-y-4 custom-scrollbar">
+                        {fetching ? (
+                            <div className="py-20 flex flex-col items-center justify-center space-y-4">
+                                <div className="w-12 h-12 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin"></div>
+                                <p className="text-slate-500 italic text-sm">Syncing gate records...</p>
+                            </div>
+                        ) : recentActivity.length > 0 ? (
+                            recentActivity.map(l => (
+                                <div key={l._id} className="p-6 bg-slate-950/40 rounded-3xl border border-slate-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 group hover:border-blue-500/30 transition-all shadow-xl">
+                                    <div className="flex items-start space-x-4">
+                                        <div className="w-14 h-14 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-500 text-xl font-black shadow-inner border border-blue-500/5">
+                                            {l.student?.name?.[0]}
+                                        </div>
+                                        <div>
+                                            <h3 className="text-white font-black text-base uppercase tracking-tight">{l.student?.name}</h3>
+                                            <div className="flex items-center font-black text-[10px] tracking-widest text-slate-500 uppercase mt-0.5">
+                                                <span>REG: {l.student?.studentId}</span>
+                                                <span className="mx-2 opacity-30">•</span>
+                                                <span className="text-blue-400">{l.leaveType}</span>
+                                            </div>
+                                            <p className="text-slate-400 text-xs mt-2 italic line-clamp-1 max-w-[200px]">
+                                                <span className="text-[10px] font-black uppercase text-slate-600 not-italic mr-1">Reason:</span>
+                                                {l.reason}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex flex-col sm:flex-row gap-6 w-full md:w-auto mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-0 border-slate-800/50">
+                                        <div className="flex flex-col">
+                                            <span className="text-[9px] font-black text-slate-500 uppercase tracking-tighter mb-1">Time Out</span>
+                                            {l.checkOutTime ? (
+                                                <div className="bg-blue-500/10 text-blue-400 px-3 py-1.5 rounded-xl border border-blue-500/20 text-[11px] font-black flex items-center gap-2">
+                                                    <Clock size={12} /> {new Date(l.checkOutTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
+                                                </div>
+                                            ) : (
+                                                <span className="text-slate-600 font-bold text-[11px] px-2 italic">---</span>
+                                            )}
+                                        </div>
+
+                                        <div className="flex flex-col">
+                                            <span className="text-[9px] font-black text-slate-500 uppercase tracking-tighter mb-1">Time In</span>
+                                            {l.checkInTime ? (
+                                                <div className="bg-green-500/10 text-green-400 px-3 py-1.5 rounded-xl border border-green-500/20 text-[11px] font-black flex items-center gap-2">
+                                                    <Clock size={12} /> {new Date(l.checkInTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
+                                                </div>
+                                            ) : (
+                                                <div className="bg-amber-500/10 text-amber-500 px-3 py-1.5 rounded-xl border border-amber-500/20 text-[9px] font-black uppercase italic animate-pulse">
+                                                    STILL OUTSIDE
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="py-20 text-center space-y-4">
+                                <div className="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mx-auto text-slate-600">
+                                    <Clock size={32} />
+                                </div>
+                                <p className="text-slate-500 font-medium italic">No gate activity recorded in the last 24 hours.</p>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
@@ -378,6 +482,13 @@ const Users = () => {
                         {(user?.role === 'admin' || user?.role === 'warden') && (
                             <>
                                 <button
+                                    onClick={() => setShowActivityModal(true)}
+                                    className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-amber-400 px-4 py-2 rounded-xl transition-all font-medium"
+                                >
+                                    <Clock className="h-5 w-5" />
+                                    <span>Recent Activity</span>
+                                </button>
+                                <button
                                     onClick={() => setShowRemoveModal(true)}
                                     className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-red-400 px-4 py-2 rounded-xl transition-all font-medium"
                                 >
@@ -489,6 +600,7 @@ const Users = () => {
                 )}
 
 
+                {showActivityModal && <RecentActivityModal onClose={() => setShowActivityModal(false)} />}
                 {showProfileModal && <ProfileModal user={selectedUser} onClose={() => setShowProfileModal(false)} />}
                 {showShiftModal && <ShiftModal student={shiftingUser} onClose={() => setShowShiftModal(false)} />}
                 {showAddModal && <AddStudentModal onClose={() => setShowAddModal(false)} onSuccess={() => { setShowAddModal(false); window.location.reload(); }} />}

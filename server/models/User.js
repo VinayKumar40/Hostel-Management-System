@@ -39,7 +39,7 @@ const userSchema = new mongoose.Schema({
     messStatus: {
         type: String,
         enum: ['active', 'inactive'],
-        default: 'active'
+        default: 'inactive'
     }
 }, { timestamps: true });
 

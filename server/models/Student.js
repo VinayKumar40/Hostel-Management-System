@@ -30,7 +30,7 @@ const studentSchema = new mongoose.Schema({
     messStatus: {
         type: String,
         enum: ['active', 'inactive'],
-        default: 'active'
+        default: 'inactive'
     },
     messType: { // e.g. Veg, Non-Veg
         type: String,
