@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const User = require('./models/User');
 const Student = require('./models/Student');
 const Room = require('./models/Room');
+const Mess = require('./models/Mess'); // Added Mess model
 const fs = require('fs');
 
 dotenv.config();
@@ -25,7 +26,7 @@ async function seedParticipants() {
         // 2. Create Warden (Adel)
         // Vinay is already created as Admin in seeder.js
         console.log('Creating Warden (Adel)...');
-        await User.create({
+        const adel = await User.create({
             name: 'Adel Muhammed',
             userId: 'WARDEN002',
             email: 'adel.warden@hostel.com',
@@ -33,36 +34,32 @@ async function seedParticipants() {
             password: 'ADEL002',
             role: 'warden',
             assignedBlock: 'Boys Hostel',
-            roomNumber: 'B101',
+            roomNumber: '1B',
             messStatus: 'active'
         });
         console.log('Warden (Adel) created successfully!');
+
+        // Update Vinay Admin just in case he lost his room during participants reset
+        await User.updateOne({ userId: '12303566' }, { $set: { roomNumber: '1A', messStatus: 'active' } });
+        const vinay = await User.findOne({ userId: '12303566' });
 
         // 3. Load Student Data
         const studentData = JSON.parse(fs.readFileSync('students_data.json', 'utf-8'));
 
         // 4. Fetch Available Rooms (Excluding 10 for emergency)
-        // Let's reserve 5 AC and 5 Non-AC per block?
-        // Actually, user said 10 rooms total (5 AC, 5 Non-AC).
-        // Let's identify them.
         const allRooms = await Room.find().sort({ roomNumber: 1 });
-
-        // Define emergency rooms (simple strategy: last 5 AC and last 5 Non-AC)
         const acRooms = allRooms.filter(r => r.type === 'AC');
         const nonAcRooms = allRooms.filter(r => r.type === 'Non-AC');
-
-        const emergencyRooms = [
-            ...acRooms.slice(-5),
-            ...nonAcRooms.slice(-5)
-        ];
+        const emergencyRooms = [...acRooms.slice(-5), ...nonAcRooms.slice(-5)];
         const emergencyIds = emergencyRooms.map(r => r._id.toString());
-
         const availableRooms = allRooms.filter(r => !emergencyIds.includes(r._id.toString()));
-        console.log(`Total Rooms: ${allRooms.length}, Emergency: ${emergencyRooms.length}, Available: ${availableRooms.length}`);
 
         // 5. Create and Allocate Students
         const studentsToCreate = [];
+        const messIds = [];
         let roomIdx = 0;
+        let messEnrollmentCount = 0;
+        const totalToEnroll = 157; // Enroll exactly 157 students
 
         const cities = ['Jaipur', 'Delhi', 'Mumbai', 'Pune', 'Ahmedabad', 'Chandigarh'];
         const states = ['Rajasthan', 'Delhi', 'Maharashtra', 'Maharashtra', 'Gujarat', 'Punjab'];
@@ -73,28 +70,31 @@ async function seedParticipants() {
             const currentRoom = availableRooms[roomIdx];
             if (!currentRoom) break;
 
-            // Determine Bed Letter (A, B, C...)
             const bedLetters = ['A', 'B', 'C', 'D'];
             const currentBed = bedLetters[currentRoom.occupants.length];
-
-            // Random academic info (only used if MISSING in JSON)
             const randIdx = Math.floor(Math.random() * cities.length);
             const course = studentData[i].course || courses[Math.floor(Math.random() * courses.length)];
             const branch = studentData[i].branch || branches[Math.floor(Math.random() * branches.length)];
             const year = studentData[i].year || (Math.floor(Math.random() * 4) + 1);
             const city = studentData[i].city || cities[randIdx];
-
             const fatherNames = ['Suresh', 'Ramesh', 'Rajesh', 'Vijay', 'Anil', 'Ashok', 'Sunil', 'Mahendra', 'Vinod', 'Sanjay', 'Prakash', 'Omprakash'];
             const motherNames = ['Sunita', 'Neena', 'Kavita', 'Rekha', 'Meena', 'Suman', 'Anita', 'Pushpa', 'Shanti', 'Lakshmi', 'Geeta', 'Babita'];
             const surname = studentData[i].name.split(' ').slice(-1)[0] || 'Sharma';
 
+            // Enroll exactly 157 students (manual spread)
+            let messStatus = 'inactive';
+            if (messEnrollmentCount < totalToEnroll) {
+                messStatus = 'active';
+                messEnrollmentCount++;
+            }
+
             const student = new Student({
                 ...studentData[i],
-                password: 'password', // Default
+                password: 'password',
                 room: currentRoom._id,
                 bedLetter: currentBed,
+                messStatus: messStatus, // Manual enrollment logic applied
                 email: `${studentData[i].name.toLowerCase().replace(/ /g, '.')}.${studentData[i].studentId}@student.com`,
-                // Profile fields (Provided data wins via spread, fallback values used if missing)
                 city: city,
                 state: states[randIdx],
                 address: `House No. ${Math.floor(Math.random() * 500)}, Street ${Math.floor(Math.random() * 50)}, Sector ${Math.floor(Math.random() * 15)}`,
@@ -104,18 +104,16 @@ async function seedParticipants() {
                 course: course,
                 branch: branch,
                 year: year,
-                feesPaid: Math.random() > 0.3, // 70% paid
-                disciplinaryRecord: Math.random() > 0.8 ? [{
-                    caseType: Math.random() > 0.5 ? 'MINOR' : 'MAJOR',
-                    description: 'Observed participating in a heated argument in the mess area.',
-                    date: new Date()
-                }] : []
+                feesPaid: Math.random() > 0.3,
+                disciplinaryRecord: []
             });
+
+            if (messStatus === 'active') {
+                messIds.push(student._id);
+            }
 
             studentsToCreate.push(student);
             currentRoom.occupants.push(student._id);
-
-            // If room still has space, we do stay, else move to next
             if (currentRoom.occupants.length >= currentRoom.seater) {
                 roomIdx++;
             }
@@ -130,6 +128,17 @@ async function seedParticipants() {
             await Room.findByIdAndUpdate(room._id, { occupants: room.occupants });
         }
         console.log('Rooms updated with occupants');
+
+        // Sync Mess Collection
+        if (vinay) messIds.push(vinay._id);
+        if (adel) messIds.push(adel._id);
+
+        await Mess.findOneAndUpdate(
+            { name: 'Central Hostel Mess' },
+            { $set: { students: messIds } },
+            { upsert: true }
+        );
+        console.log(`Mess synchronization complete. ${messIds.length} subscribers added.`);
 
         console.log('Seeding Complete!');
         process.exit(0);

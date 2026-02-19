@@ -26,7 +26,7 @@ const Users = () => {
                 if (activeTab === 'students') {
                     const { data } = await axios.get('/api/users/students');
                     setStudents(data);
-                } else if (user?.role === 'admin') {
+                } else if (user?.role === 'admin' || user?.role === 'warden') {
                     const { data } = await axios.get('/api/users/wardens');
                     setWardens(data);
                 }
