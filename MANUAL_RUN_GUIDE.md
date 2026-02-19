@@ -8,7 +8,7 @@ This guide ensures the project runs perfectly without any errors and provides th
 
 | Name | Role | User ID | Password |
 |------|------|---------|----------|
-| **Vinay Kumar** | Admin + Warden | `12303566` | `VINAY0802` |
+| **Vinay Kumar** | Admin + Warden | `12303566` | `ADEL002` |
 | **Adel Muhammed** | Area Warden | `WARDEN002` | `ADEL002` |
 
 ---

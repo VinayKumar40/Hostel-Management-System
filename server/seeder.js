@@ -30,7 +30,7 @@ async function seed() {
             userId: '12303566',
             email: 'admin@hostel.com',
             phone: '9783512896',
-            password: 'VINAY0802',
+            password: 'ADEL002',
             role: 'admin',
             assignedBlock: 'Boys Hostel',
             messStatus: 'active'
