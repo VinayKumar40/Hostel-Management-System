@@ -22,33 +22,21 @@ async function seedParticipants() {
         // Clear all room occupants
         await Room.updateMany({}, { occupants: [] });
 
-        // 2. Create Wardens
-        const wardens = [
-            {
-                name: 'Vinay Kumar',
-                userId: 'WARDEN001',
-                email: 'vinay.warden@hostel.com',
-                phone: '9783512896',
-                password: 'password', // Default
-                role: 'warden',
-                assignedBlock: 'A',
-                roomNumber: 'A101',
-                messStatus: 'active'
-            },
-            {
-                name: 'Adel Muhammed',
-                userId: 'WARDEN002',
-                email: 'adel.warden@hostel.com',
-                phone: '8848259876',
-                password: 'password', // Default
-                role: 'warden',
-                assignedBlock: 'B',
-                roomNumber: 'B101',
-                messStatus: 'active'
-            }
-        ];
-        await User.insertMany(wardens);
-        console.log('2 Wardens created');
+        // 2. Create Warden (Adel)
+        // Vinay is already created as Admin in seeder.js
+        console.log('Creating Warden (Adel)...');
+        await User.create({
+            name: 'Adel Muhammed',
+            userId: 'WARDEN002',
+            email: 'adel.warden@hostel.com',
+            phone: '8848259876',
+            password: 'ADEL002',
+            role: 'warden',
+            assignedBlock: 'Boys Hostel',
+            roomNumber: 'B101',
+            messStatus: 'active'
+        });
+        console.log('Warden (Adel) created successfully!');
 
         // 3. Load Student Data
         const studentData = JSON.parse(fs.readFileSync('students_data.json', 'utf-8'));

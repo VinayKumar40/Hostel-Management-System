@@ -22,21 +22,20 @@ async function seed() {
         console.log('Connected!');
 
         const userId = '12303566';
-        const existing = await User.findOne({ userId });
+        console.log('Resetting Admin (Vinay)...');
+        await User.deleteOne({ userId });
 
-        if (existing) {
-            console.log('Admin already exists. Checking rooms...');
-        } else {
-            console.log('Creating Admin...');
-            await User.create({
-                name: 'Vinay Admin',
-                userId: userId,
-                email: 'admin@hostel.com',
-                password: 'VINAY0802',
-                role: 'admin'
-            });
-            console.log('Admin created successfully!');
-        }
+        await User.create({
+            name: 'Vinay Kumar',
+            userId: '12303566',
+            email: 'admin@hostel.com',
+            phone: '9783512896',
+            password: 'VINAY0802',
+            role: 'admin',
+            assignedBlock: 'Boys Hostel',
+            messStatus: 'active'
+        });
+        console.log('Admin (Vinay) Created Successfully!');
 
         // Seed Rooms
         console.log('Resetting rooms collection...');
